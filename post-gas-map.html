@@ -4,7 +4,7 @@
     <style>
        #map {
         height: 800px;
-        width: 95%;
+        width: 100%;
        }
     </style>
   </head>
@@ -24,85 +24,151 @@
 			rotateControl: true,
 			mapTypeId: 'roadmap'//hybrid
           });
-		  var post[10];
-		  var postString[10];
-		  var post[1]={lat: 24.1904784, lng: 120.6122124};
-		  var postString[1] = '<div>' +'<h3>台中永安郵局</h3>' +'<h5>407台中市西屯區永安里西屯路三段166之80號</h5>' +'</div>'
-		  var post[2]={lat:24.1839553, lng: 120.6048363};
-		  var postString[2] = '<div>' +'<h3>台中榮總郵局台中52支局</h3>' +'<h5>407台中市西屯區台中港路三段160號</h5>' +'</div>'
-		  /*var post3={lat:24.1728598 , lng:120.6079429 };
-		  var post3String = '<div>' +'<h3>東海大學郵局</h3>' +'<h5>407台中市西屯區台灣大道四段1727號</h5>' +'</div>'
-		  var post4={lat:24.1728598 , lng:120.6079429 };
-		  var post4String = '<div>' +'<h3>台中工業區郵局台中46支局</h3>' +'<h5>407台中市西屯區工業區六路10號</h5>' +'</div>'
-		  var post5={lat:24.1728598 , lng:120.6079429 };
-		  var post5String = '<div>' +'<h3>台中福安郵局台中69支局</h3>' +'<h5>407台中市西屯區福順路318號</h5>' +'</div>'
-		  var post6={lat:24.1717636 , lng:120.6211608 };
-		  var post6String = '<div>' +'<h3>台中西屯郵局</h3>' +'<h5>407台中市西屯區黎明路三段130號</h5>' +'</div>'
-		  var post7={lat:24.1712154 , lng:120.630173 };
-		  var post7String = '<div>' +'<h3>臺中逢甲郵局</h3>' +'<h5>407台中市西屯區河南路2段268號</h5>' +'</div>'
-		  var post8={lat:24.1616618 , lng:120.6466525 };
-		  var post8String = '<div>' +'<h3>台中何厝郵局</h3>' +'<h5>407台中市西屯區青海路一段83號</h5>' +'</div>'
-		  var post9={lat:24.1565319 , lng:120.652867 };
-		  var post9String = '<div>' +'<h3>台中大隆路郵局</h3>' +'<h5>40759台中市西屯區大隆路60、62號</h5>' +'</div>'
+		  var icons = {
+				post: {icon:'post.png'},
+				gas: {icon:'gas.png'},
+			};
 		  
-		  var gas1={lat:24.1756634 , lng:120.6203908 };
-		  var gas1String = '<div>' +'<h3>西歐加油站</h3>' +'<h5>407台中市西屯區環中路一段2112號</h5>' +'</div>'
-		  var gas1={lat:24.1756634 , lng:120.6203908 };
-		  var gas1 = '<div>' +'<h3>台灣中油恩光中清交流道站</h3>' +'<h5>407台中市西屯區環中路一段2490號</h5>' +'</div>'
-		  var gas1={lat:24.1756634 , lng:120.6203908 };
-		  var gas1 = '<div>' +'<h3>員村加油站</h3>' +'<h5>407台中市西屯區中清路三段1號</h5>' +'</div>'
-		  var gas1={lat: , lng: };
-		  var gas1 = '<div>' +'<h3></h3>' +'<h5></h5>' +'</div>'
-		  var gas1={lat: , lng: };
-		  var gas1 = '<div>' +'<h3></h3>' +'<h5></h5>' +'</div>'
-		  var gas1={lat: , lng: };
-		  var gas1 = '<div>' +'<h3></h3>' +'<h5></h5>' +'</div>'
-		  var gas1={lat: , lng: };
-		  var gas1 = '<div>' +'<h3></h3>' +'<h5></h5>' +'</div>'
-		  var gas1={lat: , lng: };
-		  var gas1 = '<div>' +'<h3></h3>' +'<h5></h5>' +'</div>'
-		  var gas1={lat: , lng: };
-		  var gas1 = '<div>' +'<h3></h3>' +'<h5></h5>' +'</div>'
-		  var gas1={lat: , lng: };
-		  var gas1 = '<div>' +'<h3></h3>' +'<h5></h5>' +'</div>'
-		  var gas1={lat: , lng: };
-		  var gas1 = '<div>' +'<h3></h3>' +'<h5></h5>' +'</div>'
-		  var gas1={lat: , lng: };
-		  var gas1 = '<div>' +'<h3></h3>' +'<h5></h5>' +'</div>'
-		  var gas1={lat: , lng: };
-		  var gas1 = '<div>' +'<h3></h3>' +'<h5></h5>' +'</div>'
-		  var gas1={lat: , lng: };
-		  var gas1 = '<div>' +'<h3></h3>' +'<h5></h5>' +'</div>'
-		  var gas1={lat: , lng: };
-		  var gas1 = '<div>' +'<h3></h3>' +'<h5></h5>' +'</div>'
-		  var gas1={lat: , lng: };
-		  var gas1 = '<div>' +'<h3></h3>' +'<h5></h5>' +'</div>'
-		  var gas1={lat: , lng: };
-		  var gas1 = '<div>' +'<h3></h3>' +'<h5></h5>' +'</div>'
-		  var gas1={lat: , lng: };
-		  var gas1 = '<div>' +'<h3></h3>' +'<h5></h5>' +'</div>'
-		  var gas1={lat: , lng: };
-		  var gas1 = '<div>' +'<h3></h3>' +'<h5></h5>' +'</div>'
-		  var gas1={lat: , lng: };
-		  var gas1 = '<div>' +'<h3></h3>' +'<h5></h5>' +'</div>'
-		  */
-		
-		var infowindow = new google.maps.InfoWindow({
-		content: postString[],//post3String,post4String,post5String,post6String,post7String,post8String,post9String,		
-		
-		});
-
-         var marker = new google.maps.Marker({
-          position: post[],//post3,post4,post5,post6,post7,post8,post9,
-		  map: map,
-		  icon:"./post.png"
-          
+		  var features =[
+			{
+			position: new google.maps.LatLng(24.1904784,120.6122124),
+			type: 'post',
+			contentString: '<div>' +'<h3>台中永安郵局</h3>' +'<h5>407台中市西屯區永安里西屯路三段166之80號</h5>' +'</div>'
+			},{
+			position: new google.maps.LatLng(24.1839553,120.6048363),
+			type: 'post',
+			contentString: '<div>' +'<h3>台中榮總郵局台中52支局</h3>' +'<h5>407台中市西屯區台中港路三段160號</h5>' +'</div>'
+			},{
+			position: new google.maps.LatLng(24.1790274,120.6016445),
+			type: 'post',
+			contentString: '<div>' +'<h3>東海大學郵局</h3>' +'<h5>407台中市西屯區台灣大道四段1727號</h5>' +'</div>'
+			},{
+			position: new google.maps.LatLng(24.1694743,120.6065637),
+			type: 'post',
+			contentString: '<div>' +'<h3>台中工業區郵局台中46支局</h3>' +'<h5>407台中市西屯區工業區六路10號</h5>' +'</div>'
+			},{
+			position: new google.maps.LatLng(24.1834073,120.6186122),
+			type: 'post',
+			contentString: '<div>' +'<h3>台中福安郵局台中69支局</h3>' +'<h5>407台中市西屯區福順路318號</h5>' +'</div>'
+			},{
+			position: new google.maps.LatLng(24.176693,120.6376559),
+			type: 'post',
+			contentString: '<div>' +'<h3>台中西屯郵局</h3>' +'<h5>407台中市西屯區黎明路三段130號</h5>' +'</div>'
+			},{
+			position: new google.maps.LatLng(24.1752738,120.6491357),
+			type: 'post',
+			contentString: '<div>' +'<h3>臺中逢甲郵局</h3>' +'<h5>407台中市西屯區河南路2段268號</h5>' +'</div>'
+			},{
+			position: new google.maps.LatLng(24.1646241,120.6542051),
+			type: 'post',
+			contentString: '<div>' +'<h3>台中何厝郵局</h3>' +'<h5>407台中市西屯區青海路一段83號</h5>' +'</div>'
+			},{
+			position: new google.maps.LatLng(24.1565335,120.6528693),
+			type: 'post',
+			contentString: '<div>' +'<h3>台中大隆路郵局</h3>' +'<h5>40759台中市西屯區大隆路60、62號</h5>' +'</div>'
+			},{
+			
+			position: new google.maps.LatLng(24.1720838,120.6454658),
+			type: 'gas',
+			contentString: '<div>' +'<h3>台灣中油河南路站</h3>' +'<h5>407台中市西屯區河南路二段341號</h5>' +'</div>'
+			},{
+			position: new google.maps.LatLng(24.180119,120.632492),
+			type: 'gas',
+			contentString: '<div>' +'<h3>台灣中油光凰站</h3>' +'<h5>407台中市西屯區福科路110號</h5>' +'</div>'
+			},{
+			position: new google.maps.LatLng(24.171489,120.6598239),
+			type: 'gas',
+			contentString: '<div>' +'<h3>台灣中油</h3>' +'<h5>407台中市西屯區文心路三段187號</h5>' +'</div>'
+			},{
+			position: new google.maps.LatLng(24.1738312,120.6600002),
+			type: 'gas',
+			contentString: '<div>' +'<h3>台亞石油</h3>' +'<h5>407台中市西屯區河南路二段35號</h5>' +'</div>'
+			},{
+			position: new google.maps.LatLng(24.20071,120.6569755),
+			type: 'gas',
+			contentString: '<div>' +'<h3>台灣中油恩光中清交流道站</h3>' +'<h5>407台中市西屯區環中路一段2490號</h5>' +'</div>'
+			},{
+			position: new google.maps.LatLng(24.1793635,120.6343903),
+			type: 'gas',
+			contentString: '<div>' +'<h3>台塑石油環中站</h3>' +'<h5>407台中市西屯區環中路二段1286號</h5>' +'</div>'
+			},{
+			position: new google.maps.LatLng(24.1627881,120.6500829),
+			type: 'gas',
+			contentString: '<div>' +'<h3>台灣中油文心站</h3>' +'<h5>407台中市西屯區文心路三段2號</h5>' +'</div>'
+			},{
+			position: new google.maps.LatLng(24.1713259,120.64393),
+			type: 'gas',
+			contentString: '<div>' +'<h3>台灣中油 青海站</h3>' +'<h5>407台中市西屯區青海路二段211號</h5>' +'</div>'
+			},{
+			position: new google.maps.LatLng(24.1837069,120.6298519),
+			type: 'gas',
+			contentString: '<div>' +'<h3>福懋加油站</h3>' +'<h5>407台中市西屯區西屯路三段90之28號</h5>' +'</div>'
+			},{
+			position: new google.maps.LatLng(24.1624609,120.628174),
+			type: 'gas',
+			contentString: '<div>' +'<h3>台灣中油</h3>' +'<h5>407台中市西屯區環中路三段800號</h5>' +'</div>'
+			},{
+			position: new google.maps.LatLng(24.1823689,120.6336279),
+			type: 'gas',
+			contentString: '<div>' +'<h3>全國加油站</h3>' +'<h5>407台中市西屯區西屯路三段77之3號</h5>' +'</div>'
+			},{
+			position: new google.maps.LatLng(24.1998451,120.6553889),
+			type: 'gas',
+			contentString: '<div>' +'<h3>員村加油站</h3>' +'<h5>407台中市西屯區中清路三段1號</h5>' +'</div>'
+			},{
+			position: new google.maps.LatLng(24.1951643,120.6442564),
+			type: 'gas',
+			contentString: '<div>' +'<h3>統一精工速邁樂加油站</h3>' +'<h5>407台中市西屯區環中路二段698號</h5>' +'</div>'
+			},{
+			position: new google.maps.LatLng(24.1983289,120.642635),
+			type: 'gas',
+			contentString: '<div>' +'<h3>台灣中油</h3>' +'<h5>407台中市西屯區廣福路191號</h5>' +'</div>'
+			},{
+			position: new google.maps.LatLng(24.2079732,120.6512267),
+			type: 'gas',
+			contentString: '<div>' +'<h3>全國加油站</h3>' +'<h5>407台中市西屯區中清路三段457號</h5>' +'</div>'
+			},{
+			position: new google.maps.LatLng(24.1654848,120.6452205),
+			type: 'gas',
+			contentString: '<div>' +'<h3>全國加油站</h3>' +'<h5>407台中市西屯區台灣大道三段258號</h5>' +'</div>'
+			},{
+			position: new google.maps.LatLng(24.2014449,120.6631959),
+			type: 'gas',
+			contentString: '<div>' +'<h3>西歐加油站</h3>' +'<h5>407台中市西屯區環中路一段2112號</h5>' +'</div>'
+			},{
+			position: new google.maps.LatLng(24.2021158,120.6544222),
+			type: 'gas',
+			contentString: '<div>' +'<h3>台灣中油中清站</h3>' +'<h5>407台中市西屯區中清路三段150號</h5>' +'</div>'
+			},{
+			position: new google.maps.LatLng(24.1897039,120.661967),
+			type: 'gas',
+			contentString: '<div>' +'<h3>全國加油站</h3>' +'<h5>406台中市北屯區中清路二段1012號</h5>' +'</div>'
+			},{
+			position: new google.maps.LatLng(24.172338,120.6856959),
+			type: 'gas',
+			contentString: '<div>' +'<h3>福懋加油站</h3>' +'<h5>406台中市北屯區文心路四段613號</h5>' +'</div>'
+			}
+		  ];
+		 
+		  
+		features.forEach(function(feature) {
+            var marker = new google.maps.Marker({
+				position: feature.position,
+				icon: icons[feature.type].icon,
+				map: map
+			});
+		  
+			var infowindow = new google.maps.InfoWindow({
+				content: feature.contentString
+			});
+			marker.addListener('mouseover', function() {
+				infowindow.open(map, marker);
+			});
+			marker.addListener('mouseout', function() {
+				infowindow.close();
+			});          
         });
-		marker.addListener('mouseover', function() {
-		infowindow.open(map, marker);
-
-		});
-
+		
       }
     </script>
     <script async defer
